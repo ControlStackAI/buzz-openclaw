@@ -1,0 +1,51 @@
+{
+  "name": "@controlstackai/openclaw-plugin-buzz",
+  "version": "0.1.0",
+  "description": "OpenClaw Buzz channel plugin \u2014 native Nostr (NIP-01/42/29 kind:9) against a self-hosted Buzz relay",
+  "type": "module",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "nostr-tools": "^2.24.1",
+    "ws": "^8.18.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.10.3"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "setupEntry": "./setup-entry.js",
+    "channel": {
+      "id": "buzz",
+      "label": "Buzz",
+      "selectionLabel": "Buzz (Nostr relay)",
+      "docsPath": "/channels/buzz",
+      "docsLabel": "buzz",
+      "blurb": "Buzz relay over native Nostr: NIP-01 + NIP-42 + NIP-29 kind:9, one npub per agent.",
+      "order": 73
+    }
+  },
+  "scripts": {
+    "test": "node --test \"test/*.mjs\""
+  },
+  "engines": {
+    "node": ">=24.16.0 <25 || >=26.1.0"
+  },
+  "files": [
+    "index.js",
+    "setup-entry.js",
+    "runtime.js",
+    "src/",
+    "openclaw.plugin.json",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ]
+}

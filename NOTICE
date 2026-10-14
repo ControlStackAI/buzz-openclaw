@@ -1,0 +1,12 @@
+Buzz for OpenClaw
+Copyright 2026 ControlStackAI
+
+Independent channel integration for OpenClaw and Buzz.
+Not affiliated with or endorsed by Block, Inc.
+Buzz and OpenClaw names identify interoperable projects.
+
+Dependencies are distributed under their own licenses:
+- nostr-tools: MIT (https://github.com/nbd-wtf/nostr-tools)
+- ws: MIT (https://github.com/websockets/ws)
+- OpenClaw plugin SDK (peer dependency): MIT
+See dependency packages for complete copyright and license notices.

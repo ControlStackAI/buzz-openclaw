@@ -1,0 +1,79 @@
+{
+  "id": "buzz",
+  "activation": {
+    "onStartup": false
+  },
+  "channels": ["buzz"],
+  "channelEnvVars": {
+    "buzz": []
+  },
+  "channelConfigs": {
+    "buzz": {
+      "label": "Buzz",
+      "description": "Buzz relay over native Nostr: NIP-01 + NIP-42 + NIP-29 kind:9, one npub per agent.",
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "relay": { "type": "string" },
+          "projectsIndexPath": { "type": "string" },
+          "groupPolicy": { "type": "string", "enum": ["allowlist", "open"] },
+          "defaultAccount": { "type": "string" },
+          "allowFrom": { "type": "array", "items": { "type": "string" } },
+          "mentionDirectory": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
+          "publishAgentDirectory": {
+            "type": "boolean",
+            "description": "Publish kind:10100 agent-directory profiles. Leave false for Buzz Desktop 0.5.3, which hides remote directory agents."
+          },
+          "channels": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "allow": { "type": "boolean" },
+                "sessionKey": { "type": "string" },
+                "project": { "type": "string" },
+                "requireMention": { "type": "boolean" },
+                "allowFrom": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "accounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "enabled": { "type": "boolean" },
+                "name": { "type": "string" },
+                "relay": { "type": "string" },
+                "privateKey": { "type": "string" },
+                "privateKeyEnv": { "type": "string" },
+                "privateKeyFile": { "type": "string" },
+                "publishAgentDirectory": {
+                  "type": "boolean",
+                  "description": "Override kind:10100 publication for this account; useful for staged canaries."
+                }
+              }
+            }
+          }
+        }
+      },
+      "uiHints": {
+        "accounts": {
+          "label": "Agent npub accounts (one per agent, mirroring Slack bot accounts)"
+        }
+      }
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
