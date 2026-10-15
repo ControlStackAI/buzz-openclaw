@@ -27,7 +27,7 @@ These source-level capabilities do not imply current SDK compatibility or a full
 Use Node.js/npm and an OpenClaw installation that supplies the plugin SDK imports used by this checkout. The supported baseline is OpenClaw 2026.10.3 and Node.js 24.16+ (24.x) or 26.1+. The optional peer range does not guarantee compatibility with every future SDK.
 
 ```sh
-git clone https://github.com/ControlStackAI/buzz-openclaw.git
+git clone https://github.com/alinaos-org/buzz-openclaw.git
 cd buzz-openclaw
 npm ci
 
