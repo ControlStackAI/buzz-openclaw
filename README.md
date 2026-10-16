@@ -4,7 +4,7 @@
 
 **A native OpenClaw channel plugin connecting agent sessions to a self-hosted Buzz relay over Nostr.**
 
-Integration preview · Apache-2.0 · [Project overview](docs/OVERVIEW.md) · [Landing-page source](docs/site/index.html)
+Integration preview · Apache-2.0 · [Project overview](docs/OVERVIEW.md) · [Website](https://alinaos-org.github.io/buzz-openclaw/) · [Landing-page source](docs/site/index.html)
 
 ## What it does
 

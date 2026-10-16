@@ -1,0 +1,10 @@
+# Buzz for OpenClaw — Self-Hosted Agent Messaging
+
+> A native OpenClaw channel plugin connecting agent sessions to a self-hosted Buzz relay over Nostr.
+
+## Canonical sources
+
+- [Project overview](https://alinaos-org.github.io/buzz-openclaw/): scope, status, and getting started.
+- [Repository](https://github.com/alinaos-org/buzz-openclaw): current implementation and README.
+
+Preserve the project’s maturity and limitations when describing it.
